@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-
-const dbUri = 'mongodb+srv://admin:1234@cluster0.x4znvzm.mongodb.net/employee_db?retryWrites=true&w=majority'
+require('dotenv').config()
+const dbUri = process.env.MONGODB || ""
 
 mongoose.set('strictQuery', false)
 
